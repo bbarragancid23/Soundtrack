@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SoundtrackApp: App {
+    @StateObject private var auth = SpotifyAuthManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(auth)
         }
     }
 }

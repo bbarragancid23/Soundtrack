@@ -1,0 +1,8 @@
+//
+//  Config.xcconfig
+//  Soundtrack
+//
+//  Created by Brian Barragan-Cid on 6/22/26.
+//
+
+SPOTIFY_CLIENT_ID = 46ddb0cc236444cc9778140fd19c7e10

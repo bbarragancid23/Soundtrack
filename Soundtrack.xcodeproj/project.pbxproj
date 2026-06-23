@@ -6,13 +6,42 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D52985BB2FEA256000C08CB8 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D52985BA2FEA256000C08CB8 /* KeychainSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		D52985902FEA23C700C08CB8 /* Soundtrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soundtrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D52985CB2FEA44B500C08CB8 /* Exceptions for "Soundtrack" folder in "Soundtrack" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				.gitignore,
+				Info.plist,
+			);
+			target = D529858F2FEA23C700C08CB8 /* Soundtrack */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		D52985CC2FEA44B500C08CB8 /* Exceptions for "Soundtrack" folder in "Compile Sources" phase from "Soundtrack" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = D529858C2FEA23C700C08CB8 /* Sources */;
+			membershipExceptions = (
+				.gitignore,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D52985922FEA23C700C08CB8 /* Soundtrack */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D52985CB2FEA44B500C08CB8 /* Exceptions for "Soundtrack" folder in "Soundtrack" target */,
+				D52985CC2FEA44B500C08CB8 /* Exceptions for "Soundtrack" folder in "Compile Sources" phase from "Soundtrack" target */,
+			);
 			path = Soundtrack;
 			sourceTree = "<group>";
 		};
@@ -23,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D52985BB2FEA256000C08CB8 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +95,7 @@
 			);
 			name = Soundtrack;
 			packageProductDependencies = (
+				D52985BA2FEA256000C08CB8 /* KeychainSwift */,
 			);
 			productName = Soundtrack;
 			productReference = D52985902FEA23C700C08CB8 /* Soundtrack.app */;
@@ -94,6 +125,9 @@
 			);
 			mainGroup = D52985872FEA23C700C08CB8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D52985B92FEA256000C08CB8 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D52985912FEA23C700C08CB8 /* Products */;
 			projectDirPath = "";
@@ -127,6 +161,8 @@
 /* Begin XCBuildConfiguration section */
 		D52985992FEA23C900C08CB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D52985922FEA23C700C08CB8 /* Soundtrack */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -191,6 +227,8 @@
 		};
 		D529859A2FEA23C900C08CB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D52985922FEA23C700C08CB8 /* Soundtrack */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -248,6 +286,8 @@
 		};
 		D529859C2FEA23C900C08CB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D52985922FEA23C700C08CB8 /* Soundtrack */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -256,6 +296,7 @@
 				DEVELOPMENT_TEAM = X988M68224;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Soundtrack/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -280,6 +321,8 @@
 		};
 		D529859D2FEA23C900C08CB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D52985922FEA23C700C08CB8 /* Soundtrack */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -288,6 +331,7 @@
 				DEVELOPMENT_TEAM = X988M68224;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Soundtrack/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D52985B92FEA256000C08CB8 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D52985BA2FEA256000C08CB8 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D52985B92FEA256000C08CB8 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D52985882FEA23C700C08CB8 /* Project object */;
 }
