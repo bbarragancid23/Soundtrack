@@ -13,19 +13,53 @@ struct LoginView: View {
     @EnvironmentObject var auth: SpotifyAuthManager
     
     var body: some View {
-        VStack(spacing: 32) {
+        VStack(spacing: 102) {
             Spacer()
             
             VStack(spacing: 8) {
-                Text("Soundtrack")
-                    .font(.largeTitle.weight(.semibold))
-                Text("A visual timeline of your life through music.")
-                    .font(.subheadline)
+                HStack(spacing: 10) {
+                    Text("Sound")
+                    //.font(.system(size: 100))
+                        .font(.custom("AmericanTypewriter", size: 100))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.01)
+                        .frame(maxWidth: .infinity)
+                    Circle()
+                        .fill(
+                            LinearGradient(
+                                colors: [.blue, .purple],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                        .stroke(
+                            LinearGradient(
+                                colors: [.purple, .blue],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            ),
+                            lineWidth: 5
+                        )
+                        .frame(width: 60)
+                    Text("Track")
+                    //.font(.system(size: 100))
+                        .font(.custom("AmericanTypewriter", size: 100))
+                        .kerning(2)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.01)
+                        .frame(maxWidth: .infinity)
+                }
+                .padding(EdgeInsets(top: 0, leading: 10, bottom: 5, trailing: 10))
+
+                Text("The Soundtrack for your \nlife")
+                    .font(.title2)
                     .foregroundStyle(.secondary)
+                    //.padding(.top, 20 )
                     .multilineTextAlignment(.center)
             }
             
             Spacer()
+                .frame(height: 25)
             
             Button {
                 Task { await auth.login() }
@@ -43,7 +77,7 @@ struct LoginView: View {
                 .padding(.vertical, 14)
                 .background(Color(hex: "#1DB954")) // Spotify green
                 .foregroundStyle(.black)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .clipShape(RoundedRectangle(cornerRadius: 32))
             }
             .disabled(auth.isLoading)
             .padding(.horizontal, 24)
@@ -55,9 +89,13 @@ struct LoginView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24)
             }
-            
-            Spacer().frame(height: 16)
+        
+        Spacer().frame(height: 16)
         }
+        .background(
+            DotGridView()
+                .ignoresSafeArea(.all)
+        )
     }
 }
 

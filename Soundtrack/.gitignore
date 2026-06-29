@@ -6,3 +6,20 @@
 //
 
 Config.xcconfig
+# Xcode user data
+build/
+*.perspectivev3
+*.xcworkspace
+xcuserdata/
+*.xccheckout
+*.xcscm
+
+# Swift Package Manager
+.build/
+Package.resolved
+
+# Derived Data
+DerivedData/
+
+# OS X metadata
+.DS_Store
